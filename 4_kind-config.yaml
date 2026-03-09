@@ -1,0 +1,14 @@
+# 4_kind-config.yaml
+# Group 4 Infrastructure: 3-Node Cluster optimized for 8GB Host RAM
+
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+networking:
+  # CRITICAL: Disable default CNI so Flannel can take over
+  disableDefaultCNI: true
+  podSubnet: "10.244.0.0/16"
+
+nodes:
+  - role: control-plane
+  - role: worker
+  - role: worker
