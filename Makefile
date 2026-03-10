@@ -1,6 +1,3 @@
-# Makefile
-# Group 4: CNI Performance Benchmark Infrastructure Automation
-
 CLUSTER_NAME=cni-perf-group-4
 
 cluster:
@@ -8,5 +5,8 @@ cluster:
 
 delete:
 	kind delete cluster --name $(CLUSTER_NAME)
+
+flannel:
+	kubectl apply -f 4_flannel.yaml
 
 clean: delete
