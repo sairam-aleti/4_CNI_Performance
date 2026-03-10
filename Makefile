@@ -15,4 +15,8 @@ workload:
 profile:
 	bash 4_profile.sh
 
+plot:
+	python3 4_plot.py
+
 clean: delete
+	rm -f *.log
