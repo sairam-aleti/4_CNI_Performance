@@ -11,5 +11,8 @@ flannel:
 
 workload:
 	kubectl apply -f 4_workload.yaml
+	
+profile:
+	bash 4_profile.sh
 
 clean: delete
