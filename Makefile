@@ -9,4 +9,7 @@ delete:
 flannel:
 	kubectl apply -f 4_flannel.yaml
 
+workload:
+	kubectl apply -f 4_workload.yaml
+
 clean: delete
